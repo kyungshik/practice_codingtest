@@ -4,6 +4,8 @@
 
 using namespace std;
 
+/*
+ * //나의 풀이
 int isCipher(int x) {
     if (x >= 1000) {
         return 10000;
@@ -30,3 +32,22 @@ int main() {
 
     return 0;
 }
+ */
+
+//모범답안
+int main(){
+    int a = 4000;
+    int b = 90;
+
+    string stringA = to_string(a);
+    string stringB = to_string(b);
+    int combiAB = stoi(stringA + stringB);
+    int combiBA = stoi(stringB + stringA);
+    if(combiBA > combiAB)
+    {
+        cout << combiBA;
+    }
+    else cout << combiAB;
+
+
+};
