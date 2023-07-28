@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "181935_______",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "181935_______::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-181935_______-Debug-5eeb6d775f45b295b804.json",
+					"name" : "181935_______",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181935_홀짝에 따라 다른 값 변환하기_정수형 연산/cmake-build-debug",
+		"source" : "/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181935_홀짝에 따라 다른 값 변환하기_정수형 연산"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

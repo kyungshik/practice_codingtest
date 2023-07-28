@@ -1,0 +1,3 @@
+/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181935_홀짝에 따라 다른 값 변환하기_정수형 연산/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181935_홀짝에 따라 다른 값 변환하기_정수형 연산/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181935_홀짝에 따라 다른 값 변환하기_정수형 연산/cmake-build-debug/CMakeFiles/181935_______.dir
