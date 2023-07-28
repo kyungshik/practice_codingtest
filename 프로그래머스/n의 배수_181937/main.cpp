@@ -1,6 +1,12 @@
-#include <iostream>
+#include<iostream>
+
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    int num = 98;
+    int n = 3;
+
+    //num이 n이 배수면
+    if (num % n == 0) return 1;
+    else return 0;
 }
