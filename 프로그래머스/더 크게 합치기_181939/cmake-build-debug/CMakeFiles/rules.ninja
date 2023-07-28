@@ -42,7 +42,7 @@ rule CXX_EXECUTABLE_LINKER__181939_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181939 -B/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181939/cmake-build-debug
+  command = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/더 크게 합치기_181939" -B"/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/더 크게 합치기_181939/cmake-build-debug"
   description = Re-running CMake...
   generator = 1
 

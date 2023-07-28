@@ -1,3 +1,0 @@
-/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181939/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181939/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181939/cmake-build-debug/CMakeFiles/181939.dir

@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181939/cmake-build-debug"
+			"value" : "/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/더 크게 합치기_181939/cmake-build-debug"
 		},
 		{
 			"name" : "181939_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181939"
+			"value" : "/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/더 크게 합치기_181939"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181939/cmake-build-debug"
+			"value" : "/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/더 크게 합치기_181939/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -551,7 +551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181939"
+			"value" : "/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/더 크게 합치기_181939"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
