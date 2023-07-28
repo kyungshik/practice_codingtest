@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "____181938",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "____181938::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-____181938-Debug-bd06734f102cc5025589.json",
+					"name" : "____181938",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181938_두 수의 연산값 비교하기_연산_문자열/cmake-build-debug",
+		"source" : "/Users/kyungshikseong/Desktop/practice_codingtest/프로그래머스/181938_두 수의 연산값 비교하기_연산_문자열"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
