@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://school.programmers.co.kr/learn/courses/30/lessons/181832 -->
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml" class="" translate=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="코딩테스트 연습 - 정수를 나선형으로 배치하기">
+<meta name="og:title" property="og:title" itemprop="title name" content="코딩테스트 연습 - 정수를 나선형으로 배치하기">
+<meta name="twitter:image" property="og:image" itemprop="image primaryImageOfPage" content="https://image.freepik.com/free-vector/landing-page-template-for-a-website_23-2147782747.jpg">
+<meta name="og:image" property="og:image" itemprop="image primaryImageOfPage" content="https://image.freepik.com/free-vector/landing-page-template-for-a-website_23-2147782747.jpg">
+<meta name="twitter:url" property="og:url" content="https://programmers.co.kr/">
+<meta name="og:url" property="og:url" content="https://programmers.co.kr/">
+
+<title>코딩테스트 연습 - 정수를 나선형으로 배치하기 | 프로그래머스 스쿨</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://school.programmers.co.kr/assets/icons/favicon-ec61d910396b5fc4d7418ea44281693172c34e31d437d074f9ab5470523990fb.png">
+<link rel="apple-touch-icon" type="image/png" href="https://school.programmers.co.kr/assets/icons/apple-icon-8a32ac937e12475676c7102e99d34b7f908b3d1ac048d6eed0712ad111bfdd01.png">
+<meta name="keywords" content="코딩 교육, 코딩, 프로그래밍, 실습, 생활코딩, 알고리즘, cpp, 영상/실습 강의, 추천 강의">
+<meta property="fb:app_id" content="339079816467879">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="프로그래머스 스쿨">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary">
+<meta name="image" content="https://image.freepik.com/free-vector/landing-page-template-for-a-website_23-2147782747.jpg">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="N1gYEpQJG4J3R7us74kqqxKaQn_nLAiVzTdxqfHfNkC7gfive9Ka7lpfqqm2IqZVdkUj4thzorU_lyNqbr_hnw">
+<meta name="action-cable-url" content="wss://ws.programmers.co.kr:443/cable">
+<script async="" src="./정수를 나선형으로 배치하기_files/clarity.js"></script><script type="text/javascript" async="" src="./정수를 나선형으로 배치하기_files/js"></script><script async="" src="./정수를 나선형으로 배치하기_files/bnbmh1qdqm"></script><script src="./정수를 나선형으로 배치하기_files/2050250308523590" async=""></script><script async="" src="./정수를 나선형으로 배치하기_files/fbevents.js"></script><script type="text/javascript" async="" src="./정수를 나선형으로 배치하기_files/bnbjbxy3m1"></script><script type="text/javascript" async="" src="./정수를 나선형으로 배치하기_files/analytics.js"></script><script type="text/javascript" async="" src="./정수를 나선형으로 배치하기_files/js(1)"></script><script async="" src="./정수를 나선형으로 배치하기_files/gtm.js"></script><script type="text/javascript" charset="utf-8">
+  window.__env__ = {
+  STAGE: 'production',
+  SITE: 'programmers',
+  SENTRY_DSN: 'https://96f9fc1ff3f44acbb98a9c156338d14b@o1070092.ingest.sentry.io/6136918',
+  HACKLE_BROWSER_KEY: 'OKQUz9iLXiTPyzwOAyq44sT4uwMqfCzz',
+  HACKLE_EVENT_SERVER_INIT: true, // 핵클 초기화 코드 이전을 위한 임시 플래그 배포 후 삭제 예정
+  MINERVA_URL: 'minerva.programmers.co.kr',
+  HERA_CLIENT_HOST: 'https://d1nuzc1w51n1es.cloudfront.net',
+  PROGRAMMERS_HOST: 'programmers.co.kr',
+  BUSINESS_HOST: 'business.programmers.co.kr',
+  SCHOOL_HOST: 'school.programmers.co.kr',
+  INSTRUCTOR_SCHOOL_HOST: 'instructor.school.programmers.co.kr',
+  CAREER_HOST: 'career.programmers.co.kr',
+  CAMPUS_HOST: 'campus.programmers.co.kr',
+  GAIA_HOST: 'gaia.programmers.co.kr',
+  PROGRAMMERS_WS_HOST: 'ws.programmers.co.kr',
+  COMMUNITY_HOST: 'community.programmers.co.kr',
+  QNA_HOST: 'qna.programmers.co.kr',
+  IS_PROGRAMMERS_APP_REQUEST: false,
+};
+
+</script>
+  <script id="__hackle-init-info" data-user-email="kyungshikseong@gmail.com"></script>
+<script src="./정수를 나선형으로 배치하기_files/runtime~hackle-event-initializer-5ba6393cb1a4d01c94b0.js"></script>
+<script src="./정수를 나선형으로 배치하기_files/App-177727e2fbf5410c226e.chunk.js"></script>
+<script src="./정수를 나선형으로 배치하기_files/hackle-event-initializer-1b3d90291a005f62ef86.chunk.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="./정수를 나선형으로 배치하기_files/library-0e2d94e6345f59c3ed617a37b107e4c2329f28e8147817280db477328e9ae907.css" media="all" debug="false">
+  <link rel="stylesheet" href="./정수를 나선형으로 배치하기_files/application-3505e4a181975fe87a87af998c5bf1eee347dc08859638eea0a8e3e823d944d3.css" media="all">
+  <link rel="stylesheet" href="./정수를 나선형으로 배치하기_files/school-6c8b906769226f288600ebe9b81baec3e69890d27ca8d357c9714a890f27d97c.css" media="all">
+
+<meta name="google-site-verification" content="Z9qZz155KQLu77llc1wF4LlccJE88dymkeGyw1I62JY">
+
+
+
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+     user_id: '453025',
+    });
+  </script>
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+  w[l] = w[l] || [];
+  w[l].push({
+    'gtm.start':
+      new Date().getTime(), event: 'gtm.js'
+  });
+  var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+  j.async = true;
+  j.src =
+    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+  f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-NT8HLJD');</script>
+<!-- End Google Tag Manager -->
+
+
+<link rel="stylesheet" type="text/css" href="./정수를 나선형으로 배치하기_files/ae42712dc7467926fa48.css"><link rel="stylesheet" type="text/css" href="./정수를 나선형으로 배치하기_files/e08644d1afd58f761901.css"><link rel="stylesheet" type="text/css" href="./정수를 나선형으로 배치하기_files/a86f507112897be40e3e.css"><style>/* Color Blends */
+/* Extended Colors */
+#inspector-general-container #ig-app {
+  /* Tooltip container */
+}
+#inspector-general-container #ig-app .ig-tooltip {
+  position: absolute;
+  background-color: #555;
+  color: #fff;
+  padding: 2.5px;
+  z-index: 1;
+  border-radius: 6px;
+  text-align: center;
+  display: none;
+  min-width: 125px;
+  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  bottom: 1.75em;
+}
+#inspector-general-container #ig-app .ig-tooltip.ig-tooltip-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#inspector-general-container {
+  position: fixed;
+  font-family: 'Open Sans', sans-serif;
+  width: 600px;
+  height: 400px;
+  background-color: #FFFFFF;
+  z-index: 99999999;
+  box-shadow: 0 1px 2px rgba(71, 84, 112, 0.15);
+}
+#inspector-general-container.ig-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+#inspector-general-container.ig-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+#inspector-general-container.ig-top-left {
+  top: 0;
+  left: 0;
+}
+#inspector-general-container.ig-top-right {
+  top: 0;
+  right: 0;
+}
+#inspector-general-container.ig-hidden {
+  display: none;
+}
+#inspector-general-container #ig-app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: inherit;
+  background-color: #FFFFFF;
+  color: #475470;
+}
+#inspector-general-container #ig-app p {
+  padding: 0;
+}
+#inspector-general-container #ig-app .ig-multi-player-select {
+  width: 150px;
+  height: 60%;
+  padding: 5px;
+  border: 1px solid #AAB4C8;
+  box-shadow: 0 1px 2px rgba(71, 84, 112, 0.15);
+  font-size: 10px;
+  color: #252525;
+  margin: 0.3em;
+  font-family: Monaco, 'Lucida Sans Typewriter', Consolas, 'Lucida Console', 'Courier New', monospace;
+}
+#inspector-general-container #ig-app .ig-helper-container {
+  position: relative;
+  display: flex;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #AAB4C8;
+  margin-left: 10px;
+  height: 15px;
+  width: 15px;
+}
+#inspector-general-container #ig-app .ig-helper-container .ig-helper-marker {
+  color: #F2F5F9;
+  font-size: 11px;
+  font-weight: 600;
+}
+#inspector-general-container #ig-app .ig-copy-item {
+  cursor: pointer;
+  color: #0B7EF4;
+  font-size: 12px;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+#inspector-general-container #ig-app .ig-copy-item.event-feed-option {
+  margin-right: 10px;
+  margin-left: 0;
+}
+#inspector-general-container #ig-app .ig-copy-item.disabled {
+  color: #AAB4C8;
+  cursor: default;
+}
+#inspector-general-container #ig-app .ig-copy-item.underlined {
+  text-decoration: underline;
+}
+#inspector-general-container #ig-app .ig-hoverable {
+  cursor: pointer;
+}
+#inspector-general-container #ig-app .ig-small-text {
+  font-size: 12px;
+  margin: 0.3em;
+  font-weight: 600;
+}
+#inspector-general-container #ig-app .ig-fs-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#inspector-general-container #ig-app pre:not(.CodeMirror-line) {
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+}
+#inspector-general-container #ig-app body::-webkit-scrollbar {
+  background-color: #FFFFFF;
+}
+#inspector-general-container #ig-app code {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border: none;
+  background-color: #FFFFFF;
+  max-width: 700px;
+}
+#inspector-general-container #ig-app p {
+  margin: 0.3em;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 15px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: normal;
+}
+#inspector-general-container #ig-app .ig-primary-container {
+  display: flex;
+  flex: 7;
+  flex-direction: column;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-download-button {
+  font-size: 11px;
+  line-height: 20px;
+  height: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  border-radius: 3px;
+  background-color: #0B7EF4;
+  color: #F2F5F9;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  align-self: flex-start;
+  padding: 0 10px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-download-button.qoe-report {
+  margin-bottom: 10px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-download-button.report-button {
+  height: 25px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container {
+  display: flex;
+  height: 100%;
+}
+#inspector-general-container #ig-app .ig-column-header {
+  color: #AAB4C8;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: left;
+}
+#inspector-general-container .ig-no-content-container {
+  display: flex;
+  flex: 7;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+#inspector-general-container .ig-no-content-container .ig-no-content-centered-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+#inspector-general-container .ig-no-content-container .ig-no-content-centered-placeholder .ig-no-content-header {
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #000000;
+}
+#inspector-general-container #ig-app .ig-navbar-container {
+  display: flex;
+  border-bottom: 1px solid #D9DDE6;
+  box-shadow: 0 1px 2px rgba(71, 84, 112, 0.15);
+  flex: 1.2;
+  max-height: 50px;
+}
+#inspector-general-container #ig-app .ig-navbar-container .ig-placeholder-logo {
+  display: flex;
+  width: 15%;
+  background: #475470;
+}
+#inspector-general-container #ig-app .ig-navbar-container .ig-placeholder-logo svg {
+  max-height: 100%;
+}
+#inspector-general-container #ig-app .ig-navbar-container .ig-nav-tab {
+  display: flex;
+  width: 20%;
+  color: #AAB4C8;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border-right: 1px solid #D9DDE6;
+  align-items: center;
+  padding: 0 5px;
+}
+#inspector-general-container #ig-app .ig-navbar-container .ig-nav-tab.ig-active {
+  background-color: #f7f8fa;
+}
+#inspector-general-container #ig-app .ig-navbar-container .ig-navbar-header {
+  color: #475470;
+  font-weight: 600;
+  font-size: 13px;
+}
+#inspector-general-container #ig-app .ig-footer-container {
+  display: flex;
+  flex: 1.2;
+  align-items: center;
+  z-index: 50;
+  border-top: 1px solid #D9DDE6;
+}
+#inspector-general-container #ig-app .ig-footer-container .ig-footer-button-container {
+  display: flex;
+  flex: 0.8;
+  justify-content: center;
+  align-items: center;
+  height: 51.18px;
+}
+#inspector-general-container #ig-app .ig-footer-container .ig-footer-button-container.select-container {
+  flex: 1.4;
+  border: none;
+}
+#inspector-general-container #ig-app .ig-footer-container .ig-footer-button-container.left-item {
+  border-right: 1px solid #D9DDE6;
+  cursor: pointer;
+}
+#inspector-general-container #ig-app .ig-footer-container .ig-footer-button-container.left-item svg {
+  max-width: 10px;
+  max-height: 10px;
+  margin: 0;
+  display: inline-block;
+}
+#inspector-general-container #ig-app .ig-footer-container .ig-footer-button-container.right-item svg {
+  max-width: 80px;
+  margin: 0;
+  display: inline-block;
+  max-height: 28.5px;
+}
+#inspector-general-container #ig-app .ig-footer-container .ig-footer-options-container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  background-color: #f7f8fa;
+  max-height: 58.18px;
+}
+#inspector-general-container #ig-app .ig-footer-container .ig-footer-options-container #ig-position-select {
+  width: 65%;
+  height: 50%;
+  border: 1px solid #AAB4C8;
+  box-shadow: 0 1px 2px rgba(71, 84, 112, 0.15);
+  font-size: 12px;
+  color: #252525;
+  margin: 0;
+  -webkit-appearance: menulist !important;
+  font-family: Arial, sans-serif;
+}
+#inspector-general-container #ig-app .ig-footer-container .ig-footer-icon-container {
+  width: 10px;
+  cursor: pointer;
+}
+#inspector-general-container #ig-app .ig-footer-container .ig-footer-icon-container .ig-footer-icon {
+  width: 100%;
+  height: 100%;
+}
+#inspector-general-container #ig-app .ig-footer-container .ig-footer-text {
+  text-align: center;
+  font-weight: 600;
+  color: #475470;
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+#inspector-general-container #ig-app .ig-footer-container .ig-options-text {
+  margin-left: 20px;
+  margin-right: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #475470;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-report-container {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding: 20px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-report-container.flex-start {
+  justify-content: flex-start;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-report-container .ig-report-header {
+  width: 100%;
+  flex-basis: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-report-container .ig-report-header .ig-report-title {
+  color: #000000;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-report-container .ig-report-header .ig-generate-report-lead {
+  text-align: left;
+  width: 90%;
+  color: #475470;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-report-container .ig-report-input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-report-container .ig-report-input-item.button-container {
+  margin: 20px 0;
+  justify-content: flex-end;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-report-container .ig-report-input-item .ig-generate-report-prompt {
+  font-weight: 600;
+  color: #475470;
+  margin: 0 0 10px 0;
+  text-align: left;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-report-container .ig-report-input-item .ig-browsers-reported {
+  min-width: 240px;
+  max-width: 240px;
+  min-height: 30px;
+  max-height: 30px;
+  margin-bottom: 15px;
+  border: 1px solid #AAB4C8;
+  -webkit-appearance: textfield;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  text-align: left;
+  font-weight: 400;
+  background-color: #FFFFFF;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  border-radius: 4px;
+  color: #475470;
+  padding: 5px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-report-container .ig-report-input-item .ig-issue-description {
+  min-height: 75px;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  background-color: #FFFFFF;
+  max-height: 75px;
+  min-width: 240px;
+  max-width: 240px;
+  padding: 5px;
+  border: 1px solid #AAB4C8;
+  color: #475470;
+  text-align: left;
+  cursor: text;
+  resize: none;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-vpb-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-vpb-container .ig-vpb-title-container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-vpb-container .ig-vpb-title-container .ig-vpb-title {
+  color: #475470;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 4px 0 0 0;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-vpb-container .ig-vpb-title-container .ig-vpb-dropdown-container {
+  display: flex;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-vpb-container .ig-vpb-content-container {
+  flex: 4;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-vpb-container .ig-vpb-content-container .ig-vpb-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  padding: 10px 0;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-vpb-container .ig-vpb-content-container .ig-vpb-row .ig-vpb-item {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-vpb-container .ig-vpb-content-container .ig-vpb-row .ig-vpb-item.title-item p {
+  color: #475470;
+  font-weight: 600;
+  font-size: 12px;
+}
+#inspector-general-container #ig-app .ig-configuration-container {
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  flex: 7;
+  padding: 0 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#inspector-general-container #ig-app .ig-configuration-container .ig-configuration-output-footer {
+  justify-content: flex-start;
+  display: flex;
+}
+#inspector-general-container #ig-app .ig-configuration-container .ig-configuration-output-footer .ig-config-setup {
+  -webkit-appearance: textfield;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  text-align: left;
+  font-weight: 400;
+  background-color: #FFFFFF;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  color: #475470;
+}
+#inspector-general-container #ig-app .ig-configuration-container .ig-configuration-output-footer .ig-config-setup .ig-setup-button {
+  font-size: 11px;
+  line-height: 20px;
+  height: 30px;
+  cursor: default;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  border-radius: 3px;
+  background-color: #D9DDE6;
+  color: #F2F5F9;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  align-self: flex-start;
+  padding: 0 10px;
+  margin: 10px 10px 10px 0;
+}
+#inspector-general-container #ig-app .ig-configuration-container .ig-configuration-output-footer .ig-config-setup .ig-setup-button.ig-active-setup {
+  background-color: #0B7EF4;
+  cursor: pointer;
+}
+#inspector-general-container #ig-app .ig-configuration-container .ig-configuration-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+#inspector-general-container #ig-app .ig-configuration-container .ig-configuration-header-container .ig-player-configuration-header {
+  font-size: 15px;
+  text-align: left;
+  color: #475470;
+  max-width: 60%;
+  font-weight: 600;
+}
+#inspector-general-container #ig-app .ig-configuration-container .ig-configuration-output-container {
+  display: flex;
+  flex: 4;
+  padding-bottom: 10px;
+}
+#inspector-general-container #ig-app .ig-configuration-container .ig-configuration-output-container #ig-code-editor {
+  background-color: #F2F5F9;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  height: 100%;
+  color: #252525;
+  font-weight: 300;
+  line-height: normal;
+  box-shadow: 0.25px 0.25px 1px 0px #475470;
+  max-height: 205px;
+}
+#inspector-general-container #ig-app .ig-configuration-container .ig-configuration-output-container #ig-code-editor .CodeMirror {
+  font-size: 11px;
+  font-family: Monaco, 'Lucida Sans Typewriter', Consolas, 'Lucida Console', 'Courier New', monospace;
+}
+#inspector-general-container #ig-app .ig-overview-content-container.no-padding {
+  padding: 0;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col.body-item {
+  margin-bottom: 15px;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col.body-item p {
+  margin: 0;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col.primary-container {
+  padding: 20px;
+  flex: 1;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col.title-container {
+  margin-bottom: 5px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col.title-container .ig-qoe-tooltip {
+  margin-top: 5px;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-bordered-qoe {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  width: 100%;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-bordered-qoe.right-border {
+  border-right: 1px solid #D9DDE6;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-bordered-qoe .ig-qoe-report-text {
+  font-family: Monaco, 'Lucida Sans Typewriter', Consolas, 'Lucida Console', 'Courier New', monospace;
+  color: #475470;
+  font-size: 13px;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-bordered-qoe .ig-qoe-page-report {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-bordered-qoe .ig-qoe-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-bordered-qoe .ig-qoe-button-container .ig-qoe-no-report {
+  font-size: 13px;
+  font-weight: 600;
+  color: #AAB4C8;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-qoe-title {
+  color: #475470;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 4px 0 0 0;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-qoe-measure {
+  color: #AAB4C8;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: left;
+  font-size: 10px;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-qoe-measure.lighthouse-report {
+  cursor: pointer;
+  color: #0B7EF4;
+  font-size: 11px;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col.primary-col {
+  flex: 1.4;
+}
+#inspector-general-container #ig-app .CodeMirror {
+  font-family: monospace;
+  height: 100%;
+  width: 100%;
+  color: #000;
+  direction: ltr;
+  background-color: #F2F5F9;
+}
+#inspector-general-container #ig-app .CodeMirror-lines {
+  padding: 4px 0;
+}
+#inspector-general-container #ig-app .CodeMirror pre {
+  max-height: 20px !important;
+  min-height: 20px !important;
+  padding: 0 4px;
+}
+#inspector-general-container #ig-app .CodeMirror-gutter-filler,
+#inspector-general-container #ig-app .CodeMirror-scrollbar-filler {
+  background-color: #fff;
+}
+#inspector-general-container #ig-app .CodeMirror-gutters {
+  border-right: 1px solid #ddd;
+  background-color: #f7f7f7;
+  white-space: nowrap;
+}
+#inspector-general-container #ig-app .CodeMirror-linenumber {
+  padding: 0 3px 0 5px;
+  min-width: 20px;
+  text-align: right;
+  color: #999;
+  white-space: nowrap;
+}
+#inspector-general-container #ig-app .CodeMirror-guttermarker {
+  color: #000;
+}
+#inspector-general-container #ig-app .CodeMirror-guttermarker-subtle {
+  color: #999;
+}
+#inspector-general-container #ig-app .CodeMirror-cursor {
+  border-left: 1px solid #000;
+  border-right: none;
+  width: 0;
+}
+#inspector-general-container #ig-app .CodeMirror div.CodeMirror-secondarycursor {
+  border-left: 1px solid silver;
+}
+#inspector-general-container #ig-app .cm-fat-cursor .CodeMirror-cursor {
+  width: auto;
+  border: 0!important;
+  background: #7e7;
+}
+#inspector-general-container #ig-app .cm-fat-cursor div.CodeMirror-cursors {
+  z-index: 1;
+}
+#inspector-general-container #ig-app .cm-fat-cursor-mark {
+  background-color: rgba(20, 255, 20, 0.5);
+  -webkit-animation: blink 1.06s steps(1) infinite;
+  -moz-animation: blink 1.06s steps(1) infinite;
+  animation: blink 1.06s steps(1) infinite;
+}
+#inspector-general-container #ig-app .cm-animate-fat-cursor {
+  width: auto;
+  border: 0;
+  -webkit-animation: blink 1.06s steps(1) infinite;
+  -moz-animation: blink 1.06s steps(1) infinite;
+  animation: blink 1.06s steps(1) infinite;
+  background-color: #7e7;
+}
+@-moz-keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+#inspector-general-container #ig-app .cm-tab {
+  display: inline-block;
+  text-decoration: inherit;
+}
+#inspector-general-container #ig-app .CodeMirror-rulers {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -50px;
+  bottom: -20px;
+  overflow: hidden;
+}
+#inspector-general-container #ig-app .CodeMirror-ruler {
+  border-left: 1px solid #ccc;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-header {
+  color: #00f;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-quote {
+  color: #090;
+}
+#inspector-general-container #ig-app .cm-negative {
+  color: #d44;
+}
+#inspector-general-container #ig-app .cm-positive {
+  color: #292;
+}
+#inspector-general-container #ig-app .cm-header,
+#inspector-general-container #ig-app .cm-strong {
+  font-weight: 700;
+}
+#inspector-general-container #ig-app .cm-em {
+  font-style: italic;
+}
+#inspector-general-container #ig-app .cm-link {
+  text-decoration: underline;
+}
+#inspector-general-container #ig-app .cm-strikethrough {
+  text-decoration: line-through;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-keyword {
+  color: #708;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-atom {
+  color: #219;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-number {
+  color: #164;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-def {
+  color: #00f;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-variable-2 {
+  color: #05a;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-type,
+#inspector-general-container #ig-app .cm-s-default .cm-variable-3 {
+  color: #085;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-comment {
+  color: #a50;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-string {
+  color: #a11;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-string-2 {
+  color: #f50;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-meta {
+  color: #555;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-qualifier {
+  color: #555;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-builtin {
+  color: #30a;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-bracket {
+  color: #997;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-tag {
+  color: #170;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-attribute {
+  color: #00c;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-hr {
+  color: #999;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-link {
+  color: #00c;
+}
+#inspector-general-container #ig-app .cm-s-default .cm-error {
+  color: red;
+}
+#inspector-general-container #ig-app .cm-invalidchar {
+  color: red;
+}
+#inspector-general-container #ig-app .CodeMirror-composing {
+  border-bottom: 2px solid;
+}
+#inspector-general-container #ig-app div.CodeMirror span.CodeMirror-matchingbracket {
+  color: #0b0;
+}
+#inspector-general-container #ig-app div.CodeMirror span.CodeMirror-nonmatchingbracket {
+  color: #a22;
+}
+#inspector-general-container #ig-app .CodeMirror-matchingtag {
+  background: rgba(255, 150, 0, 0.3);
+}
+#inspector-general-container #ig-app .CodeMirror-activeline-background {
+  background: #e8f2ff;
+}
+#inspector-general-container #ig-app .CodeMirror {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+#inspector-general-container #ig-app .CodeMirror-scroll {
+  overflow: scroll!important;
+  margin-bottom: -30px;
+  margin-right: -30px;
+  padding-bottom: 30px;
+  height: 100%;
+  outline: 0;
+  position: relative;
+}
+#inspector-general-container #ig-app .CodeMirror-sizer {
+  position: relative;
+  border-right: 30px solid transparent;
+}
+#inspector-general-container #ig-app .CodeMirror-gutter-filler,
+#inspector-general-container #ig-app .CodeMirror-hscrollbar,
+#inspector-general-container #ig-app .CodeMirror-scrollbar-filler,
+#inspector-general-container #ig-app .CodeMirror-vscrollbar {
+  position: absolute;
+  z-index: 6;
+  display: none;
+}
+#inspector-general-container #ig-app .CodeMirror-vscrollbar {
+  right: 0;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+#inspector-general-container #ig-app .CodeMirror-hscrollbar {
+  bottom: 0;
+  left: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+#inspector-general-container #ig-app .CodeMirror-scrollbar-filler {
+  right: 0;
+  bottom: 0;
+}
+#inspector-general-container #ig-app .CodeMirror-gutter-filler {
+  left: 0;
+  bottom: 0;
+}
+#inspector-general-container #ig-app .CodeMirror-gutters {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  z-index: 3;
+}
+#inspector-general-container #ig-app .CodeMirror-gutter {
+  white-space: normal;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: -30px;
+}
+#inspector-general-container #ig-app .CodeMirror-gutter-wrapper {
+  position: absolute;
+  z-index: 4;
+  background: 0 0!important;
+  border: none !important;
+}
+#inspector-general-container #ig-app .CodeMirror-gutter-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+}
+#inspector-general-container #ig-app .CodeMirror-gutter-elt {
+  position: absolute;
+  cursor: default;
+  z-index: 4;
+}
+#inspector-general-container #ig-app .CodeMirror-gutter-wrapper ::selection {
+  background-color: transparent;
+}
+#inspector-general-container #ig-app .CodeMirror-gutter-wrapper ::-moz-selection {
+  background-color: transparent;
+}
+#inspector-general-container #ig-app .CodeMirror-lines {
+  cursor: text;
+  min-height: 1px;
+}
+#inspector-general-container #ig-app .CodeMirror pre {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-width: 0;
+  background: 0 0;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  white-space: pre;
+  word-wrap: normal;
+  line-height: inherit;
+  color: inherit;
+  z-index: 2;
+  position: relative;
+  overflow: visible;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-variant-ligatures: contextual;
+  font-variant-ligatures: contextual;
+}
+#inspector-general-container #ig-app .CodeMirror-wrap pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+}
+#inspector-general-container #ig-app .CodeMirror-linebackground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+#inspector-general-container #ig-app .CodeMirror-linewidget {
+  position: relative;
+  z-index: 2;
+  padding: 0.1px;
+}
+#inspector-general-container #ig-app .CodeMirror-rtl pre {
+  direction: rtl;
+}
+#inspector-general-container #ig-app .CodeMirror-code {
+  outline: 0;
+}
+#inspector-general-container #ig-app .CodeMirror-gutter,
+#inspector-general-container #ig-app .CodeMirror-gutters,
+#inspector-general-container #ig-app .CodeMirror-linenumber,
+#inspector-general-container #ig-app .CodeMirror-scroll,
+#inspector-general-container #ig-app .CodeMirror-sizer {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+#inspector-general-container #ig-app .CodeMirror-measure {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+#inspector-general-container #ig-app .CodeMirror-cursor {
+  position: absolute;
+  pointer-events: none;
+}
+#inspector-general-container #ig-app .CodeMirror-measure pre {
+  position: static;
+}
+#inspector-general-container #ig-app div.CodeMirror-cursors {
+  visibility: hidden;
+  position: relative;
+  z-index: 3;
+}
+#inspector-general-container #ig-app div.CodeMirror-dragcursors {
+  visibility: visible;
+}
+#inspector-general-container #ig-app .CodeMirror-focused div.CodeMirror-cursors {
+  visibility: visible;
+}
+#inspector-general-container #ig-app .CodeMirror-selected {
+  background: #d9d9d9;
+}
+#inspector-general-container #ig-app .CodeMirror-focused .CodeMirror-selected {
+  background: #d7d4f0;
+}
+#inspector-general-container #ig-app .CodeMirror-crosshair {
+  cursor: crosshair;
+}
+#inspector-general-container #ig-app .CodeMirror-line::selection,
+#inspector-general-container #ig-app .CodeMirror-line > span::selection,
+#inspector-general-container #ig-app .CodeMirror-line > span > span::selection {
+  background: #d7d4f0;
+}
+#inspector-general-container #ig-app .CodeMirror-line::-moz-selection,
+#inspector-general-container #ig-app .CodeMirror-line > span::-moz-selection,
+#inspector-general-container #ig-app .CodeMirror-line > span > span::-moz-selection {
+  background: #d7d4f0;
+}
+#inspector-general-container #ig-app .cm-searching {
+  background-color: #ffa;
+  background-color: rgba(255, 255, 0, 0.4);
+}
+#inspector-general-container #ig-app .cm-force-border {
+  padding-right: 0.1px;
+}
+@media print {
+  #inspector-general-container #ig-app .CodeMirror div.CodeMirror-cursors {
+    visibility: hidden;
+  }
+}
+#inspector-general-container #ig-app .cm-tab-wrap-hack:after {
+  content: '';
+}
+#inspector-general-container #ig-app span.CodeMirror-selectedtext {
+  background: 0 0;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-error-detail-nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px 0;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-error-detail-nav-container.config-display {
+  padding: 15px 20px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-error-detail-nav-container .ig-config-summary-title {
+  font-size: 15px;
+  color: #475470;
+  font-weight: 600;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-debug-container {
+  display: flex;
+  padding: 5px 20px;
+  flex-direction: column;
+  height: 90%;
+  overflow-y: scroll;
+  justify-content: flex-start;
+  flex: 1;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-debug-container .ig-debug-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 50px;
+  max-height: 50px;
+  border-bottom: 1px solid #D9DDE6;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-debug-container .ig-debug-row.config-error-row {
+  justify-content: flex-start;
+  align-items: center;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-debug-container .ig-debug-row.config-error-row p {
+  text-align: left;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-debug-container .ig-debug-row.header-row {
+  height: 50px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-debug-container .ig-debug-row .ig-column-header {
+  text-align: left;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-debug-container .ig-debug-row .ig-debug-item {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 50px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-debug-container .ig-debug-row .ig-debug-item.network-error {
+  justify-content: flex-start;
+  max-width: 50%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-debug-container .ig-debug-row .ig-debug-item .ig-network-error-text {
+  max-width: 50%;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-debug-container .ig-debug-row .ig-debug-item .ig-debug-item-text {
+  text-align: left;
+}
+#inspector-general-container #ig-app .ig-overview-content-container {
+  display: flex;
+  flex: 7;
+  padding: 0 40px;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex: 1;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col p {
+  text-align: left;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-overview-unit {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-overview-unit .ig-overview-header-container {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  width: 100%;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-overview-unit .ig-overview-header-container.with-tooltip {
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-overview-unit .ig-overview-header-container .ig-with-margin {
+  margin: 0.3em 0;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-overview-unit .ig-overview-detail-container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  width: 100%;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-overview-unit .ig-overview-detail-container.stream-url-container {
+  flex-direction: column;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-overview-unit .ig-overview-detail-container.player-select {
+  justify-content: flex-start;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-overview-unit .ig-overview-detail-container .ig-overview-icon-container {
+  width: 25px;
+  height: 60%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2px;
+  margin-top: 3px;
+  opacity: 0.5;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-overview-unit .ig-overview-detail-container .ig-overview-icon-container .svg {
+  width: 100%;
+  height: 100%;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-overview-unit .ig-overview-detail-container p {
+  font-family: Monaco, 'Lucida Sans Typewriter', Consolas, 'Lucida Console', 'Courier New', monospace;
+  font-size: 11px;
+  color: #475470;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-overview-unit .ig-overview-detail-container p.ig-overview-item {
+  font-family: 'Open Sans', sans-serif;
+}
+#inspector-general-container #ig-app .ig-overview-content-container .ig-overview-col .ig-overview-unit .ig-overview-detail-container p.ig-copy-item {
+  color: #0B7EF4;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-event-detail-container {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 65%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-event-detail-container .ig-event-detail-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-event-detail-container .ig-event-detail-header-container .ig-event-detail-title {
+  min-width: 30%;
+  display: flex;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-event-detail-container .ig-event-detail-header-container .ig-event-detail-title.right-item {
+  justify-content: flex-end;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-event-detail-container .ig-event-detail-header-container .ig-event-detail-title .ig-event-detail-header {
+  font-size: 15px;
+  color: #000000;
+  font-weight: 600;
+  margin-left: 0;
+  text-align: left;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-event-detail-container .ig-event-detail-header-container .ig-ping-selector-container {
+  display: flex;
+  justify-content: flex-end;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-event-detail-container .ig-event-detail-header-container .ig-ping-selector-container p {
+  margin-right: 0;
+  margin-left: 10px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-event-detail-container .ig-event-detail-primary-container {
+  display: flex;
+  flex: 7;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-event-detail-container .ig-event-detail-primary-container .ig-code-output-container {
+  width: 100%;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-event-detail-container .ig-event-detail-primary-container .ig-code-output-container .ig-code-output {
+  background-color: #f7f8fa;
+  font-family: Monaco, 'Lucida Sans Typewriter', Consolas, 'Lucida Console', 'Courier New', monospace;
+  border: none;
+  min-height: 175px;
+  max-height: 175px;
+  color: #475470;
+  font-weight: 300;
+  box-sizing: border-box;
+  font-size: 11px;
+  line-height: normal;
+  padding: 15px;
+  overflow: scroll;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-event-detail-container .ig-event-detail-primary-container .ig-event-detail-options-container {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 5px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-feed-filter-container {
+  display: flex;
+  flex-direction: row;
+  flex: 0.5;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-list-view-container .ig-feed-filter-container {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border-bottom: 1px solid #D9DDE6;
+  height: 30px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-list-view-container .ig-feed-filter-container .ig-name-filter-container {
+  width: 222px;
+  background-color: #f7f8fa;
+  border-right: 1px solid #D9DDE6;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-list-view-container .ig-feed-filter-container .ig-session-filter-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-list-view-container .ig-feed-filter-container .ig-session-filter-container .ig-session-filter-prompt {
+  font-weight: 600;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-list-view-container .ig-feed-filter-container .ig-list-filter {
+  display: flex;
+  max-width: 212px;
+  width: 212px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  flex: 1;
+  border: none;
+  min-height: 30px;
+  text-align: left;
+  font-size: 13px;
+  padding: 0 0 0 10px;
+  background-color: #f7f8fa;
+  font-weight: 600;
+  border-bottom: 1px solid #D9DDE6;
+  color: #252525;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-list-view-container .ig-feed-filter-container .ig-list-filter.play-select {
+  font-weight: 400;
+  min-width: 120px;
+  border: none;
+  height: 25px;
+  border-radius: 0px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-list-feed-container {
+  display: flex;
+  min-width: 37%;
+  max-height: 270px;
+  min-height: 270px;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: scroll;
+  border-right: 1px solid #D9DDE6;
+  background-color: #f7f8fa;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-list-feed-container .ig-list-feed-item {
+  cursor: pointer;
+  border-bottom: 1px solid #D9DDE6;
+  min-height: 45px;
+  padding: 0 15px;
+  background-color: #f7f8fa;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-list-feed-container .ig-list-feed-item.ig-overflow {
+  overflow-y: scroll;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-list-feed-container .ig-list-feed-item.no-padding.no-pointer {
+  padding: 0;
+  cursor: default;
+  border-bottom: none;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-list-feed-container .ig-list-feed-item .ig-list-touch-target {
+  width: 100%;
+  height: 45px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-list-feed-container .ig-list-feed-item .ig-list-item {
+  font-size: 12px;
+  color: #475470;
+  text-align: left;
+  margin: 0;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-list-feed-container .ig-list-feed-item .ig-list-item .ig-event-name {
+  margin-left: 5px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-list-feed-container .ig-list-feed-item .ig-list-item .ig-ping-not-sent {
+  color: #FF0046;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-list-feed-container .ig-list-feed-item .ig-list-item span {
+  font-size: 12px;
+  color: #475470;
+  font-family: Monaco, 'Lucida Sans Typewriter', Consolas, 'Lucida Console', 'Courier New', monospace;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-list-feed-container .ig-list-feed-item .ig-list-item .ig-list-bullet {
+  font-weight: 600;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container {
+  flex: 2;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: flex-start;
+  padding: 20px;
+  height: 100%;
+  flex: 1;
+  width: 100%;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column.right-column {
+  padding-left: 20px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column.left-column {
+  padding-right: 0;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row {
+  width: 65%;
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row.no-ads {
+  justify-content: center;
+  align-items: center;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row.fs-row {
+  justify-content: flex-start;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row .ig-troubleshoot-summary-item {
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row .ig-troubleshoot-summary-item .ig-troubleshooting-header {
+  font-size: 15px;
+  color: #475470;
+  font-weight: 600;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row .ig-troubleshoot-summary-item .ig-troubleshoot-item-text {
+  font-family: Monaco, 'Lucida Sans Typewriter', Consolas, 'Lucida Console', 'Courier New', monospace;
+  font-size: 13px;
+  color: #475470;
+  text-align: left;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row .ig-troubleshoot-summary-item .ig-no-ads-detected {
+  font-size: 16px;
+  color: #475470;
+  font-weight: 600;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row .ig-troubleshoot-summary-item .ig-error-container {
+  height: 20px;
+  width: 30px;
+  display: flex;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row .ig-troubleshoot-summary-item .ig-error-container.config-error {
+  margin-left: 5px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row .ig-troubleshoot-summary-item .ig-error-container.warnings-detected {
+  background-color: #FFB600;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row .ig-troubleshoot-summary-item .ig-error-container.errors-detected {
+  background-color: #FF0046;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row .ig-troubleshoot-summary-item .ig-error-container.no-errors {
+  background-color: #00C669;
+  cursor: default;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-troubleshoot-summary-row .ig-troubleshoot-summary-item .ig-error-container .ig-error-count {
+  color: #F2F5F9;
+  font-size: 11px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-error-summary-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-error-summary-container.preload-container {
+  flex: 3.5;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-error-summary-container.with-border {
+  border-right: 1px solid #D9DDE6;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-error-summary-container.flex-start {
+  justify-content: flex-start;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-error-summary-container.half-flex {
+  flex: 0.5;
+  padding-top: 10px;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-error-summary-container .ig-vpb-container {
+  display: flex;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-error-summary-container .ig-preload-box {
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex: 1;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-error-summary-container .ig-preload-box .ig-inconsistent-input-container {
+  display: flex;
+  flex-direction: row;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-error-summary-container .ig-preload-box .ig-inconsistent-input-container .ig-inconsistent-report-input {
+  font-size: 12px;
+  margin: 0 5px;
+  width: 25px;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  height: 100%;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-error-summary-container .ig-preload-box .ig-preload-text {
+  font-size: 12px;
+  text-align: left;
+  font-weight: 400;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-error-summary-container .ig-preload-box .ig-preload-text.ig-invalid-input {
+  color: #FF0046;
+}
+#inspector-general-container #ig-app .ig-primary-container .ig-primary-content-container .ig-troubleshooting-container .ig-troubleshooting-column .ig-error-summary-container .ig-preload-box .ig-inconsistent-report-count {
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+</style><script type="text/javascript" src="chrome-extension://oneljddokkbioaemddedcbdejocnhijg/inject.bundle.js"></script></head>
+<body class="learn-lessons learn-lessons-show " data-ns="Learn" data-controller="lessons" data-action="show" data-defaultlocale="ko" data-locale="ko" data-signed-in="true" data-new-gr-c-s-check-loaded="14.1138.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1138.0">
+
+
+
+  <div class="navbar navbar-dark navbar-expand-lg navbar-application navbar-breadcrumb">
+  <a class="navbar-brand" href="https://school.programmers.co.kr/">
+    <img alt="logo" width="24" src="./정수를 나선형으로 배치하기_files/bi-symbol-light-4a9edc980025418d6883d7519df4acf2b6c65f068508931dff0881d1c5ad4721.png">
+</a>  <ol class="breadcrumb"><li><a href="https://school.programmers.co.kr/learn/challenges">코딩테스트 연습</a></li><li><a href="https://school.programmers.co.kr/learn/challenges/training">코딩 기초 트레이닝</a></li><li class="active">정수를 나선형으로 배치하기</li></ol>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item"><a onclick="Learn.lessons.challengeable.startTour(true)" class="nav-link" id="help" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832#">도움말</a></li>
+        <li class="nav-item"><a class="nav-link" data-remote="true" href="https://school.programmers.co.kr/compile_options">컴파일 옵션</a></li>
+      </ul>
+    </div>
+</div>
+
+
+
+<div class="main theme-dark">
+  
+<script src="./정수를 나선형으로 배치하기_files/47e92f3010f28583fd7f.js" defer="defer"></script>
+
+
+  <div class="lesson-content" data-course-slug="코딩테스트-연습" data-course-id="30" data-lesson-id="181832" data-lesson-type="Challenge" data-lesson-title="정수를 나선형으로 배치하기" data-challenge-level="0" data-challenge-category="algorithm" data-course-category="open_challenge" data-next-lesson-id="">
+
+    
+
+<ul class="challenge-nav nav nav-tabs nav-tabs-dark task-tab" id="tab" role="tablist">
+  <li class="nav-item algorithm-nav-link algorithm-title">
+    정수를 나선형으로 배치하기
+  </li>
+
+  
+<div class="challenge-settings nav-item">
+    <div class="btn-group-theme btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-sm btn-outline-dark active">
+          <input type="radio" name="themes" autocomplete="off" checked="" data-toggle="button" data-theme="dark">dark
+        </label>
+        <label class="btn btn-sm btn-outline-dark">
+          <input type="radio" name="themes" autocomplete="off" data-toggle="button" data-theme="light">light
+        </label>
+    </div>
+
+      <div data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="코드 에디터의 단축키를 설정하는 옵션입니다. 선호하는 에디터 옵션이 없다면 sublime을 선택해주세요." data-original-title="" title="">
+        <div class="btn-group-keymap btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-dark active">
+              <input type="radio" name="keymaps" autocomplete="off" checked="" data-keymap="sublime">sublime
+            </label>
+            <label class="btn btn-sm btn-outline-dark">
+              <input type="radio" name="keymaps" autocomplete="off" data-keymap="vim">vim
+            </label>
+            <label class="btn btn-sm btn-outline-dark">
+              <input type="radio" name="keymaps" autocomplete="off" data-keymap="emacs">emacs
+            </label>
+        </div>
+      </div>
+
+    <div class="dropdown-language" id="tour7">
+      <button class="btn btn-sm btn-dark dropdown-toggle" type="button" data-toggle="dropdown">
+        C++
+      </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832?language=c">C</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832?language=cpp">C++</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832?language=csharp">C#</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832?language=go">Go</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832?language=java">Java</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832?language=javascript">JavaScript</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832?language=kotlin">Kotlin</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832?language=python3">Python3</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832?language=ruby">Ruby</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832?language=scala">Scala</a>
+            <a class="dropdown-item" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832?language=swift">Swift</a>
+        </div>
+    </div>
+
+
+  <div class="connection-box connection-status js-connection-status-alert connected">
+    <svg class="ic-18"><use xlink:href="/assets/svg-defs-c93961e98ea10015ef5f0f1617c39858b7917ee2b118aa63b0d9d3de94e04bce.svg#ic-power-off"></use></svg>
+    <span class="connection-status-txt">네트워크 연결 끊김</span>
+  </div>
+</div>
+
+</ul>
+
+<div class="challenge-content lesson-algorithm-main-section " data-challengeable-id="17692" data-challengeable-type="algorithm" data-algorithm-type="standard" data-language="cpp" data-user-id="453025" data-interface-type="function" data-lesson-comment-activation-score="30" data-is-lesson="true">
+    <div></div>
+    
+
+<div class="main-section ">
+  <div class="guide-section " id="tour2" style="width: calc(40% - 12px);">
+    <div class="guide-section-description">
+      <h6 class="guide-section-title">문제 설명</h6>
+      <div class="markdown solarized-dark"><p>양의 정수 <code>n</code>이 매개변수로 주어집니다. <code>n</code> × <code>n</code> 배열에 1부터 <code>n</code><sup>2</sup> 까지 정수를 인덱스 [0][0]부터 시계방향 나선형으로 배치한 이차원 배열을 return 하는 solution 함수를 작성해 주세요.</p>
+
+<hr>
+
+<h5>제한사항</h5>
+
+<ul>
+<li>1 ≤ <code>n</code> ≤ 30</li>
+</ul>
+
+<hr>
+
+<h5>입출력 예</h5>
+<table class="table">
+        <thead><tr>
+<th>n</th>
+<th>result</th>
+</tr>
+</thead>
+        <tbody><tr>
+<td>4</td>
+<td>[[1, 2, 3, 4], [12, 13, 14, 5], [11, 16, 15, 6], [10, 9, 8, 7]]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>[[1, 2, 3, 4, 5], [16, 17, 18, 19, 6], [15, 24, 25, 20, 7], [14, 23, 22, 21, 8], [13, 12, 11, 10, 9]]</td>
+</tr>
+</tbody>
+      </table>
+<hr>
+
+<h5>입출력 예 설명</h5>
+
+<p>입출력 예 #1</p>
+
+<ul>
+<li><p>예제 1번의 <code>n</code>의 값은 4로 4 × 4 배열에 다음과 같이 1부터 16까지 숫자를 채울 수 있습니다.</p>
+<table class="table">
+        <thead><tr>
+<th>행 \ 열</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+        <tbody><tr>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>11</td>
+<td>16</td>
+<td>15</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>10</td>
+<td>9</td>
+<td>8</td>
+<td>7</td>
+</tr>
+</tbody>
+      </table>
+<p>따라서 [[1, 2, 3, 4], [12, 13, 14, 5], [11, 16, 15, 6], [10, 9, 8, 7]]를 return 합니다.</p></li>
+</ul>
+
+<p>입출력 예 #2</p>
+
+<ul>
+<li><p>예제 2번의 <code>n</code>의 값은 5로 5 × 5 배열에 다음과 같이 1부터 25까지 숫자를 채울 수 있습니다.</p>
+<table class="table">
+        <thead><tr>
+<th>행 \ 열</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+        <tbody><tr>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>15</td>
+<td>24</td>
+<td>25</td>
+<td>20</td>
+<td>7</td>
+</tr>
+<tr>
+<td>3</td>
+<td>14</td>
+<td>23</td>
+<td>22</td>
+<td>21</td>
+<td>8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>13</td>
+<td>12</td>
+<td>11</td>
+<td>10</td>
+<td>9</td>
+</tr>
+</tbody>
+      </table>
+<p>따라서 [[1, 2, 3, 4, 5], [16, 17, 18, 19, 6], [15, 24, 25, 20, 7], [14, 23, 22, 21, 8], [13, 12, 11, 10, 9]]를 return 합니다.</p></li>
+</ul>
+</div>
+    </div>
+  </div>
+
+
+  <div class="gutter gutter-horizontal" style="width: 24px; background-image: url(&quot;/assets/img-grippie-vertical-cd0206a7a3122deb89a192c09ca241e8614c02e38b4f47ffb3af1a2e5246b85f.png&quot;);"></div><div class="run-section" style="width: calc(60% - 12px);">
+    <div id="tour3" class="code-section" onkeyup="Hera.tryoutChallenges.resizeEditor(this);" style="height: calc(60% - 7px);">
+      <div class="editor">
+        <ul class="nav nav-pills editor-nav-pills tap-form">
+    <input type="hidden" name="initial_code_63230" id="initial_code_63230" value="#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+vector&lt;vector&lt;int&gt;&gt; solution(int n) {
+    vector&lt;vector&lt;int&gt;&gt; answer;
+    return answer;
+}" autocomplete="off">
+    <input id="63230" data-type="code" data-language="cpp" type="hidden" value="#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+vector&lt;vector&lt;int&gt;&gt; solution(int n) {
+    vector&lt;vector&lt;int&gt;&gt; answer;
+    return answer;
+}">
+    <li class="nav-item">
+      <a href="https://school.programmers.co.kr/learn/courses/30/lessons/181832#" class="btn-tab nav-link active" data-id="63230" data-language="cpp">
+        solution.cpp </a>
+    </li>
+</ul>
+        
+          <textarea hidden="" id="code" name="code" style="display: none;">#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+vector&lt;vector&lt;int&gt;&gt; solution(int n) {
+    vector&lt;vector&lt;int&gt;&gt; answer;
+    return answer;
+}</textarea><div class="CodeMirror cm-s-tomorrow-night-bright CodeMirror-wrap" translate="no"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 199.188px; left: 67.6328px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 48px; margin-bottom: -8px; border-right-width: 42px; min-height: 210px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like">x</pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style="visibility: hidden;"><div class="CodeMirror-cursor" style="left: 19.6328px; top: 179.188px; height: 22.3984px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;string&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;vector&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">using</span> <span class="cm-keyword">namespace</span> <span class="cm-def">std</span>;</span></pre></div><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">vector</span><span class="cm-operator">&lt;</span><span class="cm-variable">vector</span><span class="cm-operator">&lt;</span><span class="cm-type">int</span><span class="cm-operator">&gt;&gt;</span> <span class="cm-def">solution</span>(<span class="cm-type">int</span> <span class="cm-variable">n</span>) {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">vector</span><span class="cm-operator">&lt;</span><span class="cm-variable">vector</span><span class="cm-operator">&lt;</span><span class="cm-type">int</span><span class="cm-operator">&gt;&gt;</span> <span class="cm-variable">answer</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable">answer</span>;</span></pre></div><div style="position: relative;" class="CodeMirror-activeline"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -48px; width: 48px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" aria-hidden="true" style="left: -48px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 42px; width: 1px; border-bottom: 0px solid transparent; top: 210px;"></div><div class="CodeMirror-gutters" style="height: 252px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 48px;"></div></div></div></div>
+      </div>
+    </div>
+
+    <div class="gutter gutter-vertical" style="height: 14px;"></div><div class="output-section" id="tour6" style="height: calc(40% - 7px);">
+      <div class="tab-header">
+          <div id="output-title" class="output-title output-only" data-toggle="tab">
+            <span class="connection-status connected" data-container="body" data-toggle="popover" data-placement="top" title="" data-html="true" data-content="
+                    &lt;h6&gt;네트워크가 불안정하여 서버와의 연결이 끊어졌습니다.
+                    페이지 새로고침을 하거나 네트워크가 안정적이 되면 자동으로 재 연결됩니다.&lt;/h6&gt;
+                    &lt;h6 style=&#39;margin-top: 4px;&#39;&gt;네트워크가 정상임에도 계속해서 연결이 끊어진 상태가 지속된다면 네트워크 방화벽 문제일 수 있습니다.
+                    모바일 테더링 등 다른 네트워크를 통해 테스트에 접속해 보세요.&lt;/h6&gt;" data-original-title="서버와의 연결 끊김">
+              <svg class="ic-24"><use xlink:href="/assets/svg-defs-c93961e98ea10015ef5f0f1617c39858b7917ee2b118aa63b0d9d3de94e04bce.svg#ic-power-off"></use></svg>
+            </span>
+
+            실행 결과
+              <a id="stop-button" class="btn btn-sm btn-danger" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832#">실행 중지</a>
+            <span id="output-spinner" class="spinner hidden">
+              <span class="bounce1"></span>
+              <span class="bounce2"></span>
+              <span class="bounce3"></span>
+            </span>
+          </div>
+      </div>
+
+      <div class="console tab-content">
+          <div id="output" class="console-output tab-pane fade in active show banner">
+            <div id="output-wrapper">
+              실행 결과가 여기에 표시됩니다.
+              <pre class="console-content"><div></div></pre>
+            </div>
+              
+
+
+
+  <div class="challengeable-banner-wrapper result-banner hidden" style="position:relative;width:100%;margin-bottom: 21px;">
+    <a href="https://school.programmers.co.kr/learn/courses/19249/19249-1%EA%B8%B0-k-digital-training-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%94%A9-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81-7e674bab-edc2-4507-8779-f11e740d8a78" target="_blank" style="width:100%;display:flex;justify-content:center;" data-hackle-value="{&quot;key&quot;:&quot;school_challenge_coderun_banner_clicked&quot;,&quot;properties&quot;:{&quot;course_id&quot;:30,&quot;lesson_id&quot;:181832,&quot;banner_id&quot;:6270,&quot;challenge_title&quot;:&quot;정수를 나선형으로 배치하기&quot;,&quot;challenge_level&quot;:0,&quot;challenge_category&quot;:&quot;algorithm&quot;}}">
+      <img src="./정수를 나선형으로 배치하기_files/5d8bfeca-dede-4d20-a54f-bda7ef36d8c4.png" alt="프로그래머스 K-Digital Training" style="width:100%; max-width:728px;">
+    </a>
+  </div>
+
+          </div>
+
+          <div id="ai" class="ai-output tab-pane fade in show" role="tabpanel" aria-labelledby="output-tab">
+            <div class="intro">
+              <div class="title">내가 제출한 코드가 왜 틀렸는지 프로그래머스 AI에게 물어보세요.</div>
+              <div class="note"><svg class="ic-14"><use xlink:href="/assets/svg-defs-c93961e98ea10015ef5f0f1617c39858b7917ee2b118aa63b0d9d3de94e04bce.svg#ic-info"></use></svg> 제출 후 채점하기를 눌러 30점 이상인 경우 물어볼 수 있어요.<br> 베타 기간 동안에는 한 문제당 1번만 물어볼 수 있어요.</div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="button-section">
+  <div class="testcase-button">
+    <a id="btn-show-question" class="btn btn-dark" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832/questions">질문하기 (12)</a>
+        <a class="btn btn-dark btn-block" data-remote="true" href="https://school.programmers.co.kr/challenge_algorithms/17692/custom_testcases?lesson_id=181832">
+          테스트 케이스 추가하기
+</a>  </div>
+
+  <div class="func-buttons">
+      <a id="view-solution-group" class="btn btn-dark btn-svg" data-remote="true" href="https://school.programmers.co.kr/learn/courses/30/lessons/181832/solution_groups?language=cpp">
+        <svg class="ic-24 ic-white"><use xlink:href="/assets/svg-defs-c93961e98ea10015ef5f0f1617c39858b7917ee2b118aa63b0d9d3de94e04bce.svg#ic-lock-full"></use></svg> <span>다른 사람의 풀이</span>
+</a>
+      <a id="reset-code" class="btn btn-dark" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="에디터의 코드가 초기화됩니다. 초기화 버튼을 누르기 이전 코드 복원하려면 코드 에디터에 커서를 두고 Ctrl-Z를 눌러 보세요." href="https://school.programmers.co.kr/learn/courses/30/lessons/181832#" data-original-title="" title="">초기화</a>
+      <div id="tour4" data-hackle-value="{&quot;key&quot;:&quot;school_challenge_coderun_clicked&quot;,&quot;properties&quot;:{&quot;course_id&quot;:30,&quot;lesson_id&quot;:181832,&quot;challenge_title&quot;:&quot;정수를 나선형으로 배치하기&quot;,&quot;challenge_level&quot;:0,&quot;challenge_category&quot;:&quot;algorithm&quot;}}">
+        <button name="button" type="submit" id="run-code" class="btn btn-dark" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="작성한 코드를 제출하기 전에 먼저 실행해볼 수 있습니다. 예시 테스트 케이스를 사용하며, [테스트 케이스 추가하기]를 눌러 원하는 테스트 케이스를 추가할 수 있습니다." data-original-title="" title="">코드 실행</button>
+      </div>
+
+        <div id="tour5">
+          <button name="button" type="submit" id="submit-code" class="btn btn-primary" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="시험 종료 전까지 언제든 다시 제출할 수 있으며, 제출한 코드 중 가장 높은 점수를 낸 코드가 최종 답안이 됩니다." data-original-title="" title="">제출 후 채점하기</button>
+        </div>
+  </div>
+</div>
+
+</div>
+
+  </div>
+
+</div>
+
+
+
+<div class="modal fade" id="modal-dialog" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+  <script src="./정수를 나선형으로 배치하기_files/library-19d966b68acf14159482ff7ce93b24b1983ce9ee9b43d5207fdd043050cedb14.js" debug="false"></script>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("set","autoConfig",!1,"2050250308523590");fbq("init","2050250308523590");fbq("track","PageView");</script>
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2050250308523590&amp;ev=PageView&amp;noscript=1">
+</noscript>
+<script type="text/javascript" id="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","bnbmh1qdqm");</script><div class="tui-tooltip" style="display: none;"><div class="arrow"></div><span class="text"></span></div><div class="tui-tooltip" style="display: none;"><div class="arrow"></div><span class="text"></span></div>
+  <script>
+//<![CDATA[
+    I18n.defaultLocale = "ko";
+    I18n.locale = "ko";
+    I18n.fallbacks = true;
+
+//]]>
+</script>  <script src="./정수를 나선형으로 배치하기_files/application-df1ab5ffa0c2d654e0f63c4fbd8b4bb28c19d80244cf9a887a3fe60ec7dc5cf0.js"></script>
+
+<script>
+//<![CDATA[
+window.addEventListener('load', function() {});
+//]]>
+</script>
+  <script src="./정수를 나선형으로 배치하기_files/all.js" type="text/javascript">
+    cloudinary.setCloudName('eightcruz');
+  </script>
+
+  <script src="./정수를 나선형으로 배치하기_files/loader.js" type="text/javascript"></script>
+
+  <script src="./정수를 나선형으로 배치하기_files/bundle.tracing.min.js" integrity="sha384-3eSp2mmX0+DiH727hyDCiJsV+21D7/8YtcsQuhzpNTUTKJsYa16mVS5qfrdYjkoe" crossorigin="anonymous"></script>
+  <script src="./정수를 나선형으로 배치하기_files/replay.min.js" integrity="sha384-OyijgDSvsvb+KX1VDi8ziL9uCN0xLSrE6qM/7sJ+Bq+e1ujXDIaWQbW+U46SKfMD" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    Sentry.init({
+      environment: "production",
+      dsn: "https://96f9fc1ff3f44acbb98a9c156338d14b@o1070092.ingest.sentry.io/6136918",
+      replaysSessionSampleRate: 0.01,
+      replaysOnErrorSampleRate: 1.0,
+      integrations: [
+        new Sentry.Integrations.BrowserTracing(),
+        new Sentry.Integrations.Replay(),
+      ],
+      initialScope: {
+        code_version: "8e6f447a6d5a90bb75c092336364b3f0e25725f6",
+        user: {
+          id: 453025,
+          username: "k*******k",
+          email: "ky************@gmail.com"
+        },
+      },
+      // Set tracesSampleRate to 1.0 to capture 100%
+      // of transactions for performance monitoring.
+      // We recommend adjusting this value in production
+      tracesSampleRate: 0.01,
+      beforeSend: function beforeSend(event) {
+        const firstException = (event.exception && event.exception.values || [])[0];
+
+        if (firstException) {
+          const mechanism = firstException.mechanism;
+          const stacktrace = firstException.stacktrace;
+          const value = firstException.value;
+
+          const isOnError = () => mechanism && mechanism.type === 'onerror';
+          const hasAnonymousFilename = () => Boolean(
+            stacktrace && stacktrace.frames && stacktrace.frames.some(
+              ({ filename }) => filename && filename.includes('anonymous'),
+            ),
+          );
+
+          const isIgnorableAgoraError = value?.includes('can not generate join message, no join info') || value?.includes('WS_ABORT');
+
+          /* console의 예외는 sentry에 보내지 않는다. #4226 */
+          if (isOnError() && hasAnonymousFilename())
+            return null;
+
+          if (isIgnorableAgoraError)
+            return null;
+        }
+
+        return event;
+      },
+    });
+  </script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT8HLJD"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script type="text/javascript" charset="utf-8">
+  window.addEventListener('afterprint', function() {
+      $.ajax({
+          type: 'POST',
+          url: '/api/action_trackings/print_screen',
+          data: {
+              current_path: window.location.href
+          }
+      })
+  })
+</script>
+
+
+
+
+<noscript>
+  이 사이트의 기능을 모두 활용하기 위해서는 자바스크립트를 활성화할 필요가 있습니다.
+  <a href="http://www.enable-javascript.com/ko/" target="_blank">
+    브라우저에서 자바스크립트를 활성화하는 방법</a>을 참고하세요.
+</noscript>
+
+
+
+
+<div id="snackbar-container"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
